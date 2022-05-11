@@ -9,6 +9,12 @@ export class RecipeListComponent implements OnInit {
 
   constructor() { }
 
+  recipes = [
+    {id:1, name: 'Apple pie', description: 'Sugar, flour, chocolate, valium'},
+    {id:2, name: 'Banana bread', description: 'Sugar, flour, bananas, vicodin'},
+    {id:3, name: 'Choc chip cookies', description: 'Sugar, flour, chocolate, marijuana'}
+  ];
+
   ngOnInit(): void {
   }
 
