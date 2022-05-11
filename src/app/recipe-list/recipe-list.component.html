@@ -1,18 +1,20 @@
-<h2>Recipes for disaster</h2>
+<div class="container">
+  <h2>Recipes for disaster</h2>
 
-<div *ngIf="selectedRecipe">
-  <br />
-  <h4>
-    {{selectedRecipe.name}}
-  </h4>
-  <p>
-    {{selectedRecipe.description}}
-  </p>
-  <br />
-</div>
+  <div *ngIf="selectedRecipe">
+    <br />
+    <h4>
+      {{ selectedRecipe.name }}
+    </h4>
+    <p>
+      {{ selectedRecipe.description }}
+    </p>
+    <br />
+  </div>
 
-<div *ngFor="let recipe of recipes">
-  <p (click)="onSelect(recipe)" style="cursor: pointer;">
-    {{recipe.name}}
-  </p>
+  <div *ngFor="let recipe of recipes">
+    <p (click)="onSelect(recipe)" style="cursor: pointer">
+      {{ recipe.name }}
+    </p>
+  </div>
 </div>
