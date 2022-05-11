@@ -15,7 +15,13 @@ export class RecipeListComponent implements OnInit {
     {id:3, name: 'Choc chip cookies', description: 'Sugar, flour, chocolate, marijuana'}
   ];
 
+  selectedRecipe?: any;
+
   ngOnInit(): void {
+  }
+
+  onSelect(recipe: any): void {
+    this.selectedRecipe = recipe;
   }
 
 }
