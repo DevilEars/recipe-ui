@@ -16,5 +16,7 @@
     <p (click)="onSelect(recipe)" style="cursor: pointer">
       {{ recipe.name }}
     </p>
+    <a [routerLink]="['/recipes', recipe.id]">Edit</a>
   </div>
+  <a [routerLink]="['/recipes']" class="btn btn-primary">Add</a>
 </div>
