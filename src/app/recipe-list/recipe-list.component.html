@@ -2,21 +2,25 @@
   <h2>Recipes for disaster</h2>
 
   <div *ngIf="selectedRecipe">
-    <br />
     <h4>
       {{ selectedRecipe.name }}
     </h4>
     <p>
       {{ selectedRecipe.description }}
     </p>
-    <br />
   </div>
 
   <div *ngFor="let recipe of recipes">
+    <br />
     <p (click)="onSelect(recipe)" style="cursor: pointer">
       {{ recipe.name }}
     </p>
     <a [routerLink]="['/recipes', recipe.id]">Edit</a>
+    <br />
+    <a (click)="onDelete(recipe)" class="link-primary">Delete</a>
   </div>
-  <a [routerLink]="['/recipes']" class="btn btn-primary">Add</a>
+  <br />
+  <div>
+    <a [routerLink]="['/recipes']" class="btn btn-primary">Add</a>
+  </div>
 </div>
